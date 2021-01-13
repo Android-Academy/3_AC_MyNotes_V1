@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteActivity">
+
+    <include
+        android:id="@+id/mFrameLayout"
+        layout="@layout/toolbar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mFrameLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Title"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textCapWords"
+                android:maxLength="36"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textCursorDrawable="@null"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/edit_note"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoLink="web|email"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Notice"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textCapSentences|textMultiLine"
+                android:linksClickable="true"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

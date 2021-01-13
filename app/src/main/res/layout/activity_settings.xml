@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <include
+        android:id="@+id/mFrameLayout"
+        layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/settingsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle|end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mFrameLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="showPicker1"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/primary_imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/circle_background_border"
+                android:src="@drawable/ic_black_circle" />
+
+            <TextView
+                android:id="@+id/primary_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Primary Colour"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="showPicker2"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/font_imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/circle_background_border"
+                android:src="@drawable/ic_black_circle" />
+
+            <TextView
+                android:id="@+id/font_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Font Colour"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="showPicker3"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/background_imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/circle_background_border"
+                android:src="@drawable/ic_black_circle" />
+
+            <TextView
+                android:id="@+id/background_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Background Colour"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:onClick="toggleCheckBox"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp">
+
+            <CheckBox
+                android:id="@+id/nav_checkBox"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="12dp" />
+
+            <TextView
+                android:id="@+id/nav_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Colour Navigation Bar"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:onClick="saveSettings"
+        android:text="Apply Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyNotes_V1</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="new_note">New Note</string>
+    <string name="delete">Delete</string>
+    <string name="undo">Undo</string>
+    <string name="share">Share</string>
+    <string name="note">Note</string>
+    <string name="sort">Sort</string>
+    <string name="shareto">Share to:</string>
+    <string name="confrim_del">Confirm Deletion</string>
+    <string name="del_message">Are you sure you want tod delete this note?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
